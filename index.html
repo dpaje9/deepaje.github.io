@@ -44,4 +44,123 @@
     .section-header { margin-bottom: 3rem; }
     .section-eyebrow { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--earth); margin-bottom: 0.6rem; }
     .section-title { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; color: var(--bark); line-height: 1.15; }
-    .service-card { display: grid; grid-tem
+    .service-card { display: grid; grid-template-columns: 4px 1fr; gap: 0 2rem; background: #FBF8F3; border-radius: 4px; margin-bottom: 1.5rem; overflow: hidden; }
+    .card-stripe { width: 4px; }
+    .card-body { padding: 2rem 2rem 2rem 0; }
+    .card-type { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--earth); opacity: 0.7; margin-bottom: 0.4rem; }
+    .card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; color: var(--bark); margin-bottom: 0.7rem; }
+    .card-desc { font-size: 0.95rem; color: var(--earth); margin-bottom: 1.2rem; line-height: 1.75; }
+    .card-includes { list-style: none; margin-bottom: 1.4rem; }
+    .card-includes li { font-size: 0.88rem; padding: 3px 0; color: var(--bark); }
+    .card-includes li::before { content: '→ '; color: var(--earth); font-weight: 500; }
+    .card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--mist); padding-top: 1rem; margin-top: 0.5rem; }
+    .card-price { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--earth); font-weight: 500; }
+    .card-price span { font-family: 'Outfit', sans-serif; font-size: 0.8rem; font-weight: 400; opacity: 0.7; }
+    .how-section { background: var(--bark); padding: 80px 5vw; color: var(--sand); }
+    .how-inner { max-width: 1100px; margin: 0 auto; }
+    .how-section .section-eyebrow { color: var(--butter); }
+    .how-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
+    .step-num { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 2.5rem; color: var(--butter); line-height: 1; margin-bottom: 0.8rem; }
+    .step-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--sand); }
+    .step-desc { font-size: 0.88rem; line-height: 1.7; color: var(--mist); }
+    .contact-section { padding: 100px 5vw; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .contact-left p { font-size: 0.97rem; color: var(--earth); line-height: 1.8; margin-bottom: 1rem; }
+    .contact-detail { font-size: 0.88rem; color: var(--earth); margin-bottom: 0.4rem; }
+    .contact-detail a { color: var(--earth); text-decoration: underline; }
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group label { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--earth); }
+    .form-group input, .form-group textarea, .form-group select { background: #FBF8F3; border: 1px solid var(--mist); border-radius: 3px; padding: 12px 14px; font-family: 'Outfit', sans-serif; font-size: 0.95rem; color: var(--bark); outline: none; }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-submit { background: var(--butter); color: var(--bark); border: none; padding: 14px 32px; font-family: 'Outfit', sans-serif; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; border-radius: 2px; cursor: pointer; align-self: flex-start; }
+    footer { background: var(--bark); color: var(--mist); padding: 2rem 5vw; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--sand); }
+    .footer-note { font-size: 0.8rem; opacity: 0.6; }
+    @media (max-width: 768px) { .about { grid-template-columns: 1fr; } .contact-section { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#" class="nav-logo">Deepa Je</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Work with me</a></li>
+    </ul>
+  </nav>
+  <section class="hero">
+    <p class="hero-eyebrow">Freelance Operations & Chief of Staff</p>
+    <h1>The person who makes<br><em>everything actually work.</em></h1>
+    <p class="hero-sub">I help founders and small organisations build the operational backbone they need to grow — without the overhead of a full-time hire. Nearly 10 years of experience across campaigns, events, community, and digital tools.</p>
+    <a href="#contact" class="hero-cta">Let's talk</a>
+    <span class="hero-note">Based in Berlin · Working globally · Remote-first</span>
+  </section>
+  <div style="max-width:1100px;margin:0 auto;padding:0 5vw;"><div class="divider-inner"></div></div>
+  <section class="about" id="about">
+    <div class="about-label">A generalist<br>who goes<br>deep.</div>
+    <div class="about-body">
+      <p>I've spent nearly a decade making things run — inside nonprofits, advocacy organisations, and scrappy teams that needed someone who could hold strategy and spreadsheets in the same hand.</p>
+      <p>I'm not a specialist who does one thing brilliantly. I'm the person who <strong>connects the dots</strong>: who sees that your CRM chaos, your unclear team priorities, and your stalled campaign are all the same problem in different clothes.</p>
+      <p>I work best with founders and small teams who are doing meaningful work and need a trusted operational partner — someone who can parachute in, figure out what's actually broken, and fix it without drama.</p>
+      <div class="tags">
+        <span class="tag">Operations</span><span class="tag">Chief of Staff</span><span class="tag">Community</span><span class="tag">Campaigns</span><span class="tag">Events</span><span class="tag">Digital Tools</span><span class="tag">Nonprofits</span><span class="tag">Startups</span>
+      </div>
+    </div>
+  </section>
+  <div style="max-width:1100px;margin:0 auto;padding:0 5vw;"><div class="divider-inner"></div></div>
+  <section class="services-section" id="services">
+    <div class="section-header">
+      <p class="section-eyebrow">What I offer</p>
+      <h2 class="section-title">Services & packages</h2>
+    </div>
+    <div class="service-card"><div class="card-stripe" style="background:var(--stripe-1);"></div><div class="card-body"><p class="card-type">Retainer · Monthly</p><h3 class="card-title">Fractional Chief of Staff</h3><p class="card-desc">Your strategic right hand. I sit alongside you to keep priorities clear, decisions moving, and the team aligned — without the cost of a full-time senior hire.</p><ul class="card-includes"><li>Weekly 1:1 and async support throughout the month</li><li>Meeting prep, follow-up, and accountability tracking</li><li>Cross-team coordination and stakeholder comms</li><li>Strategic project oversight and unblocking</li></ul><div class="card-footer"><div class="card-price">From €2,500 <span>/ month</span></div></div></div></div>
+    <div class="service-card"><div class="card-stripe" style="background:var(--stripe-2);"></div><div class="card-body"><p class="card-type">Retainer · Monthly</p><h3 class="card-title">Community Manager</h3><p class="card-desc">Consistent, human community management for organisations that know their people are their biggest asset — but don't have the bandwidth to show up for them properly.</p><ul class="card-includes"><li>Community platform management (Circle, Slack, Discord, etc.)</li><li>Member onboarding and engagement flows</li><li>Event coordination and programming support</li><li>Monthly reporting and community health check</li></ul><div class="card-footer"><div class="card-price">From €1,500 <span>/ month</span></div></div></div></div>
+    <div class="service-card"><div class="card-stripe" style="background:var(--stripe-3);"></div><div class="card-body"><p class="card-type">Project · Fixed scope</p><h3 class="card-title">Operations & Tools Setup</h3><p class="card-desc">For teams running on gut instinct and scattered Google Docs. I audit what you have, identify the gaps, and set up the systems and tools that will actually get used.</p><ul class="card-includes"><li>Ops audit and gap analysis</li><li>Tool selection and implementation (Notion, Airtable, etc.)</li><li>SOPs and process documentation</li><li>Team onboarding and handover</li></ul><div class="card-footer"><div class="card-price">From €2,000 <span>/ project</span></div></div></div></div>
+    <div class="service-card"><div class="card-stripe" style="background:var(--stripe-4);"></div><div class="card-body"><p class="card-type">Project · Fixed scope</p><h3 class="card-title">Campaign Operations</h3><p class="card-desc">The operational backbone your campaign needs to actually land. I handle the coordination, timelines, and logistics so your team can focus on the work that moves people.</p><ul class="card-includes"><li>Campaign planning and workback scheduling</li><li>Cross-functional coordination and comms</li><li>Asset and deadline tracking</li><li>Post-campaign debrief and documentation</li></ul><div class="card-footer"><div class="card-price">From €1,800 <span>/ project</span></div></div></div></div>
+    <div class="service-card"><div class="card-stripe" style="background:var(--stripe-5);"></div><div class="card-body"><p class="card-type">Project · Fixed scope</p><h3 class="card-title">Event Production</h3><p class="card-desc">End-to-end event management for organisations that want the event to feel effortless — for attendees and for themselves. Online, in-person, or hybrid.</p><ul class="card-includes"><li>Full project management from brief to debrief</li><li>Vendor and venue coordination</li><li>Run-of-show and logistics planning</li><li>On-site or remote event support</li></ul><div class="card-footer"><div class="card-price">From €1,500 <span>/ event</span></div></div></div></div>
+  </section>
+  <section class="how-section">
+    <div class="how-inner">
+      <div class="section-header"><p class="section-eyebrow">The process</p><h2 class="section-title" style="color:var(--sand);">How we'd work together</h2></div>
+      <div class="how-steps">
+        <div class="how-step"><div class="step-num">One</div><div class="step-title">Intro call</div><p class="step-desc">A 30-minute conversation to understand what you're working on, what's not working, and whether I'm the right fit.</p></div>
+        <div class="how-step"><div class="step-num">Two</div><div class="step-title">Proposal</div><p class="step-desc">I'll send a clear scope, timeline, and price. No surprises, no vague "it depends."</p></div>
+        <div class="how-step"><div class="step-num">Three</div><div class="step-title">Kickoff</div><p class="step-desc">We align on priorities, ways of working, and communication. Then I get to work.</p></div>
+        <div class="how-step"><div class="step-num">Four</div><div class="step-title">Delivery</div><p class="step-desc">Regular updates, no radio silence. You'll always know where things stand.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="contact-section" id="contact">
+    <div class="contact-left">
+      <p class="section-eyebrow">Get in touch</p>
+      <h2 class="section-title">Let's talk about<br>your project.</h2>
+      <p>Not sure which package fits? That's fine — just tell me what's going on and we'll figure out the right shape together.</p>
+      <p class="contact-detail">📍 Berlin, Germany</p>
+      <p class="contact-detail">🌍 Working globally, remote-first</p>
+      <p class="contact-detail">✉️ <a href="mailto: deepaje00@gmail.com">deepaje00@gmail.com</a></p>
+    </div>
+    <div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-group"><label for="name">Your name</label><input type="text" id="name" placeholder="Anna Müller" /></div>
+        <div class="form-group"><label for="email">Email</label><input type="email" id="email" placeholder="anna@company.com" /></div>
+        <div class="form-group"><label for="interest">I'm interested in…</label><select id="interest"><option value="">Select a service</option><option>Fractional Chief of Staff</option><option>Community Manager</option><option>Operations & Tools Setup</option><option>Campaign Operations</option><option>Event Production</option><option>Not sure yet</option></select></div>
+        <div class="form-group"><label for="message">Tell me about your project</label><textarea id="message" placeholder="What are you working on? What's not working?"></textarea></div>
+        <button type="submit" class="form-submit">Send message</button>
+        <p id="form-success" style="display:none;color:var(--earth);font-size:0.9rem;">✓ Thanks! I'll be in touch within 2 business days.</p>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <span class="footer-logo">Dee Paje</span>
+    <span class="footer-note">Berlin · deepaje.com · deepaje00@gmail.com</span>
+  </footer>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('form-success').style.display = 'block';
+      e.target.querySelector('.form-submit').textContent = 'Sent ✓';
+      e.target.querySelector('.form-submit').style.background = '#8FAF9A';
+    }
+  </script>
+</body>
+</html>
